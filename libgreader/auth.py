@@ -58,7 +58,7 @@ class ClientAuthMethod(AuthenticationMethod):
     """
     Auth type which requires a valid Google Reader username and password
     """
-    CLIENT_URL = 'https://www.google.com/accounts/ClientLogin'
+    CLIENT_URL = 'https://www.bazqux.com/accounts/ClientLogin'
 
     def __init__(self, username, password):
         super(ClientAuthMethod, self).__init__()
@@ -131,7 +131,7 @@ class OAuthMethod(AuthenticationMethod):
     """
     Loose wrapper around OAuth2 lib. Kinda awkward.
     """
-    GOOGLE_URL        = 'https://www.google.com/accounts/'
+    GOOGLE_URL        = 'https://www.bazqux.com/accounts/'
     REQUEST_TOKEN_URL = (GOOGLE_URL + 'OAuthGetRequestToken?scope=%s' %
                          ReaderUrl.READER_BASE_URL)
     AUTHORIZE_URL     = GOOGLE_URL + 'OAuthAuthorizeToken'
@@ -241,7 +241,7 @@ class OAuth2Method(AuthenticationMethod):
     SCOPE = [
         'https://www.googleapis.com/auth/userinfo.email',
         'https://www.googleapis.com/auth/userinfo.profile',
-        'https://www.google.com/reader/api/',
+        'https://www.bazqux.com/reader/api/',
     ]
 
     def __init__(self, client_id, client_secret):
